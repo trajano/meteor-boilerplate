@@ -36,20 +36,21 @@ if (typeof Meteor === typeof undefined) {
   }
 
   gulp.task('lint', function() {
-    return gulp.src(['**/*.js'].concat(excludedSrcs))
+    return gulp.src(jsSrc)
       .pipe(esLint())
       .pipe(esLint.format())
+      .pipe(eslint.failAfterError());
   })
 
   gulp.task('tidy', ['format-json', 'format-js'])
   gulp.task('format-json', function() {
-    return gulp.src(['**/*.json'].concat(excludedSrcs))
+    return gulp.src(jsonSrc)
       .pipe(jsonFormat(2))
       .pipe(eol())
       .pipe(gulp.dest('.'))
   })
   gulp.task('format-js', function() {
-    return gulp.src(['**/*.js'].concat(excludedSrcs))
+    return gulp.src(jsSrc)
       .pipe(esFormatter(esFormatterOptions))
       .pipe(eol())
       .pipe(gulp.dest('.'))
