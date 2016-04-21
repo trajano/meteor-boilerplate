@@ -1,6 +1,11 @@
 FAQ
 ===
 
+#### How are the internal packages organized?
+
+The internal packages are organized to group related code into their
+respective tiers: client, data model and server services.
+
 #### package.json `devDependencies` contain a lot of entries
 
 This boilerplate is intended to be used in many different environments.  One
