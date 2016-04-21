@@ -39,7 +39,7 @@ if (typeof Meteor === typeof undefined) {
     return gulp.src(jsSrc)
       .pipe(esLint())
       .pipe(esLint.format())
-      .pipe(eslint.failAfterError());
+      .pipe(esLint.failAfterError());
   })
 
   gulp.task('tidy', ['format-json', 'format-js'])
