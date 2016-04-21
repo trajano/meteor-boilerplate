@@ -1,8 +1,15 @@
 sudo: false
 
+language: node_js
+node_js:
+  - "0.12"
+
 before_install:
   - curl https://install.meteor.com | /bin/sh
   - export PATH="$HOME/.meteor:$PATH"
+
+services:
+  - mongodb
 
 before_script:
   - meteor npm install -g gulp spacejam
