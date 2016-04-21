@@ -1,0 +1,11 @@
+root=true
+
+[*]
+charset=utf-8
+
+[*.{js,json,html}]
+indent_style=space
+insert_final_newline=true
+
+[*.{js,json}]
+indent_size=2
