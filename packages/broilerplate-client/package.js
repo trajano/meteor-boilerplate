@@ -5,6 +5,9 @@ Package.describe({
   version: '1.0.0'
 })
 Package.onUse(function (api) {
-  api.use(['ecmascript', 'blaze-html-templates'], 'client')
+  api.use(['ecmascript',
+    'blaze-html-templates',
+    'broilerplate:broilerplate-model'],
+    'client')
   api.mainModule('main.js', 'client')
 })
