@@ -4,10 +4,9 @@
     "sourceType": "module"
   },
   "extends": [
-    "eslint:recommended"
+    "standard"
   ],
-  "env": {
-    "meteor": true,
-    "browser": true
+  "envs": {
+    "meteor": true
   }
 }

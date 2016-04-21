@@ -1,11 +1,11 @@
 if (typeof Meteor === typeof undefined) {
   'use strict'
 
-  var gulp = require('gulp'),
-    eol = require('gulp-eol'),
-    esFormatter = require('gulp-esformatter'),
-    esLint = require('gulp-eslint'),
-    jsonFormat = require('gulp-json-format')
+  var gulp = require('gulp')
+  var eol = require('gulp-eol')
+  var esFormatter = require('gulp-esformatter')
+  var esLint = require('gulp-eslint')
+  var jsonFormat = require('gulp-json-format')
 
   // Excluded sources.
   var excludedSrcs = [
@@ -32,24 +32,34 @@ if (typeof Meteor === typeof undefined) {
     LimitLineBreaks: 2,
     quotes: {
       type: 'single'
+    },
+    whiteSpace: {
+      before: {
+        MemberExpressionOpening: 1
+      },
+      after: {
+        FunctionName: 1,
+        FunctionReservedWord: 1,
+        MethodDefinitionName: 1
+      }
     }
   }
 
-  gulp.task('lint', function() {
+  gulp.task('lint', function () {
     return gulp.src(jsSrc)
       .pipe(esLint())
       .pipe(esLint.format())
-      .pipe(esLint.failAfterError());
+      .pipe(esLint.failAfterError())
   })
 
   gulp.task('tidy', ['format-json', 'format-js'])
-  gulp.task('format-json', function() {
+  gulp.task('format-json', function () {
     return gulp.src(jsonSrc)
       .pipe(jsonFormat(2))
       .pipe(eol())
       .pipe(gulp.dest('.'))
   })
-  gulp.task('format-js', function() {
+  gulp.task('format-js', function () {
     return gulp.src(jsSrc)
       .pipe(esFormatter(esFormatterOptions))
       .pipe(eol())
@@ -57,5 +67,4 @@ if (typeof Meteor === typeof undefined) {
   })
 
   gulp.task('default', ['lint'])
-
 }
