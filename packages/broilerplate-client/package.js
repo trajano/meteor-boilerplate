@@ -6,7 +6,6 @@ Package.describe({
 })
 Package.onUse(function (api) {
   api.use(['ecmascript',
-    'blaze-html-templates',
     'broilerplate:broilerplate-model'],
     'client')
   api.mainModule('main.js', 'client')
