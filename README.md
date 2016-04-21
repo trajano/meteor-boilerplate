@@ -1,6 +1,8 @@
 Meteor Boilerplate Project
 ==========================
 
+[![Build Status](https://travis-ci.org/trajano/meteor-boilerplate.svg?branch=master)](https://travis-ci.org/trajano/meteor-boilerplate)
+
 This is a boilerplate project for [Meteor][] to get new [Meteor][] projects
 up and running quickly and to provide a working example of my
 [Meteor Application Structure][1].

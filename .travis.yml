@@ -1,0 +1,12 @@
+sudo: false
+
+before_install:
+  - curl https://install.meteor.com | /bin/sh
+  - export PATH="$HOME/.meteor:$PATH"
+
+before_script:
+  - meteor npm install -g gulp spacejam
+
+script:
+  - meteor npm install
+  - gulp
