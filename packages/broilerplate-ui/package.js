@@ -1,7 +1,7 @@
 /* global Package */
 Package.describe({
-  name: 'broilerplate:broilerplate-client',
-  summary: 'broilerplate Client',
+  name: 'broilerplate:broilerplate-ui',
+  summary: 'broilerplate UI',
   version: '1.0.0'
 })
 Package.onUse(function (api) {
