@@ -3,6 +3,8 @@ FAQ
 
 #### How are the internal packages organized?
 
+#### How are the internal packages organized?
+
 The internal packages are organized to group related code into their
 respective tiers: UI, data model and server services.
 
