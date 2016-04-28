@@ -11,9 +11,9 @@ if (typeof Meteor === typeof undefined) {
   var _ = r('lodash')
 
   // Linters
-  var cssLint = r('gulp-csslint')
   var esLint = r('gulp-eslint')
   var htmlLint = r('gulp-htmllint')
+  var lessHint = r('gulp-lesshint')
   var jsonLint = r('gulp-jsonlint')
 
   // Formatters
@@ -39,7 +39,7 @@ if (typeof Meteor === typeof undefined) {
   ]
 
   // Sources
-  var cssSrc = ['**/*.css'].concat(excludedSrcs)
+  var cssSrc = ['**/*.css','**/*.less'].concat(excludedSrcs)
   var htmlSrc = ['**/*.html'].concat(excludedSrcs)
   var jsSrc = ['**/*.js'].concat(excludedSrcs)
   var jsonSrc = ['**/*.json', '**/.eslintrc.json', '.esformatter'].concat(excludedSrcs)
@@ -68,12 +68,12 @@ if (typeof Meteor === typeof undefined) {
    */
   gulp.task('lint', ['lint-css', 'lint-html', 'lint-js', 'lint-json'])
   /**
-   * Check CSS code style conformance.
+   * Check LESS/CSS code style conformance.
    * @verbose
    */
   gulp.task('lint-css', function () {
     return gulp.src(cssSrc)
-      .pipe(cssLint()).pipe(cssLint.reporter())
+      .pipe(lessHint()).pipe(lessHint.reporter())
   })
   /**
    * Check HTML code style conformance.
