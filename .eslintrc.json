@@ -1,0 +1,22 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "extends": [
+    "airbnb/base",
+    "plugin:meteor/recommended",
+    "standard"
+  ],
+  "envs": {
+    "meteor": true
+  },
+  "plugins": [
+    "import",
+    "meteor"
+  ],
+  "rules": {},
+  "settings": {
+    "import/resolver": "meteor"
+  }
+}

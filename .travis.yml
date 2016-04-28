@@ -1,0 +1,18 @@
+sudo: false
+
+language: node_js
+
+before_install:
+  - curl https://install.meteor.com | /bin/sh
+  - export PATH="$HOME/.meteor:$PATH"
+
+before_script:
+  - meteor npm install
+
+cache:
+  directories:
+    - node_modules
+
+script:
+  - meteor npm run gulp
+  - meteor build $HOME/build.tgz

@@ -1,10 +1,54 @@
 {
   "name": "meteor-boilerplate",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "meteor run"
+    "start": "meteor run",
+    "gulp": "meteor node node_modules/gulp/bin/gulp.js",
+    "lint": "meteor npm run gulp lint",
+    "tidy": "meteor npm run gulp tidy"
   },
   "dependencies": {
+    "lodash": "^4.11.1",
     "meteor-node-stubs": "~0.2.0"
+  },
+  "devDependencies": {
+    "chalk": "^1.1.3",
+    "es-strip-semicolons": "^1.0.6",
+    "esformatter-asi": "^0.5.2",
+    "esformatter-eol-last": "^1.0.0",
+    "esformatter-limit-linebreaks": "0.0.3",
+    "esformatter-quote-props": "^1.0.2",
+    "esformatter-quotes": "^1.0.3",
+    "esformatter-remove-trailing-commas": "^1.0.1",
+    "esformatter-semicolons": "^1.1.2",
+    "esformatter-use-strict": "^2.0.2",
+    "eslint": "^2.8.0",
+    "eslint-config-airbnb": "^8.0.0",
+    "eslint-config-standard": "^5.1.0",
+    "eslint-import-resolver-meteor": "^0.2.0",
+    "eslint-plugin-import": "^1.6.1",
+    "eslint-plugin-meteor": "^3.5.2",
+    "eslint-plugin-promise": "^1.1.0",
+    "eslint-plugin-standard": "^1.3.2",
+    "estraverse": "^4.2.0",
+    "estraverse-fb": "^1.3.1",
+    "gulp": "latest",
+    "gulp-batch": "^1.0.5",
+    "gulp-csscomb": "^3.0.7",
+    "gulp-csslint": "^0.3.0",
+    "gulp-eol": "latest",
+    "gulp-esdoc": "^0.2.0",
+    "gulp-esformatter": "^6.0.0",
+    "gulp-eslint": "^2.0.0",
+    "gulp-htmllint": "0.0.8",
+    "gulp-jsdoc3": "^0.2.1",
+    "gulp-json-format": "^1.0.0",
+    "gulp-jsonlint": "^1.1.2",
+    "gulp-lesshint": "^1.1.0",
+    "gulp-prettify": "^0.4.0",
+    "gulp-task-doc": "^1.0.8",
+    "gulp-util": "^3.0.7",
+    "gulp-watch": "^4.3.5"
   }
 }
