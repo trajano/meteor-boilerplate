@@ -37,7 +37,6 @@
     "gulp": "latest",
     "gulp-batch": "^1.0.5",
     "gulp-csscomb": "^3.0.7",
-    "gulp-csslint": "^0.3.0",
     "gulp-eol": "latest",
     "gulp-esdoc": "^0.2.0",
     "gulp-esformatter": "^6.0.0",
