@@ -32,7 +32,6 @@
     "gulp": "latest",
     "gulp-batch": "^1.0.5",
     "gulp-csscomb": "^3.0.7",
-    "gulp-csslint": "^0.3.0",
     "gulp-eol": "latest",
     "gulp-esdoc": "^0.2.0",
     "gulp-esformatter": "^6.0.0",
@@ -41,6 +40,7 @@
     "gulp-htmllint": "0.0.8",
     "gulp-json-format": "^1.0.0",
     "gulp-jsonlint": "^1.1.2",
+    "gulp-lesshint": "^1.1.0",
     "gulp-task-doc": "^1.0.8",
     "gulp-util": "^3.0.7",
     "gulp-watch": "^4.3.5"
