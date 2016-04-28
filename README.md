@@ -1,0 +1,29 @@
+Meteor Boilerplate Project
+==========================
+
+[![Build Status](https://travis-ci.org/trajano/meteor-boilerplate.svg?branch=master)](https://travis-ci.org/trajano/meteor-boilerplate)
+
+This is a boilerplate project for [Meteor][] to get new [Meteor][] projects
+up and running quickly and to provide a working example of my
+[Meteor Application Structure][1].
+
+
+## Quick Start
+
+1. `git clone https://github.com/trajano/meteor-boilerplate.git`
+2. `cd meteor-boilerplate`
+3. `meteor npm i`
+4. `meteor npm i -g gulp`
+5. `meteor`
+
+## Features
+
+* `gulp help`
+* Linter rules defined
+* Formatter rules defined
+* API documents are generated
+* Travis builds configured
+* Editor config
+
+[Meteor]: http://www.meteor.com/
+[1]: http://www.trajano.net/2016/05/meteor-application-structure

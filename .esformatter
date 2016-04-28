@@ -1,0 +1,24 @@
+{
+  "root": true,
+  "plugins": [
+    "esformatter-asi",
+    "esformatter-limit-linebreaks",
+    "esformatter-quotes",
+    "esformatter-quote-props",
+    "esformatter-remove-trailing-commas"
+  ],
+  "LimitLineBreaks": 2,
+  "quotes": {
+    "type": "single"
+  },
+  "whiteSpace": {
+    "before": {
+      "MemberExpressionOpening": 1
+    },
+    "after": {
+      "FunctionName": 1,
+      "FunctionReservedWord": 1,
+      "MethodDefinitionName": 1
+    }
+  }
+}
