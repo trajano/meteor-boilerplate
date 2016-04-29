@@ -4,14 +4,17 @@
   "private": true,
   "scripts": {
     "start": "meteor run",
+    "test": "meteor test --driver-package practicalmeteor:mocha --port 3100",
     "gulp": "gulp",
     "lint": "gulp lint",
     "tidy": "gulp tidy"
   },
   "dependencies": {
+    "chai": "^3.5.0",
     "lodash": "^4.11.1",
     "meteor-node-stubs": "~0.2.0",
-    "serve-static": "^1.10.2"
+    "serve-static": "^1.10.2",
+    "sinon": "^1.17.4"
   },
   "devDependencies": {
     "chalk": "^1.1.3",

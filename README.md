@@ -20,6 +20,7 @@ This is a boilerplate project for [Meteor] to get new [Meteor] projects up and r
 - [API documents are deployable to Github Pages][ghpages]
 - Travis builds configured
 - Editor config
+- Testing support
 
 [1]: http://www.trajano.net/2016/05/meteor-application-structure
 [2]: http://localhost:3000/apidocs
