@@ -12,8 +12,10 @@ services:
   - mongodb
 
 before_script:
-  - meteor npm install -g gulp spacejam
+  - meteor npm install -g gulp
 
 script:
   - meteor npm install
   - gulp
+  - meteor add dispatch:mocha-phantomjs
+  - meteor test --once --driver-package dispatch:mocha-phantomjs

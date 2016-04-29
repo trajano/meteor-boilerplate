@@ -24,6 +24,7 @@ up and running quickly and to provide a working example of my
 * API documents are generated
 * Travis builds configured
 * Editor config
+* Testing support
 
 [Meteor]: http://www.meteor.com/
 [1]: http://www.trajano.net/2016/05/meteor-application-structure

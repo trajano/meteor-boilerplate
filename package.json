@@ -2,7 +2,8 @@
   "name": "meteor-boilerplate",
   "private": true,
   "scripts": {
-    "start": "meteor run"
+    "start": "meteor run",
+    "test": "meteor test --driver-package practicalmeteor:mocha"
   },
   "dependencies": {
     "lodash": "^4.11.1",
