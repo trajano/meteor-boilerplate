@@ -24,7 +24,7 @@ if (typeof Meteor === typeof undefined) {
   var jsonFormat = r('gulp-json-format')
 
   // Documenters
-  var esDoc = r('gulp-esdoc')
+  var jsDoc = r('gulp-jsdoc3')
 
   /**
    * Files excluded from the source globs.
@@ -55,12 +55,34 @@ if (typeof Meteor === typeof undefined) {
    * Generate EcmaScript documentation.
    * @verbose
    */
-  gulp.task('doc-js', function () {
-    return gulp.src(['.'])
-      .pipe(esDoc({
-        excludes: ['node_modules', 'public', '\\.meteor', 'packages'],
-        destination: 'public/apidocs/'
-      }))
+  gulp.task('doc-js', function(cb) {
+    return gulp.src(jsSrc.concat('README.md'))
+      .pipe(jsDoc({
+        "tags": {
+          "allowUnknownTags": true
+        },
+        "source": {
+          "excludePattern": "(^|\\/|\\\\)_"
+        },
+        "opts": {
+          "destination": "./public/apidocs"
+        },
+        "plugins": [
+          "plugins/markdown"
+        ],
+        "templates": {
+          "cleverLinks": false,
+          "monospaceLinks": false,
+          "default": {
+            "outputSourceFiles": true
+          },
+          "path": "ink-docstrap",
+          "theme": "cerulean",
+          "navType": "vertical",
+          "linenums": true,
+          "dateFormat": "MMMM Do YYYY, h:mm:ss a"
+        }
+      }, cb))
   })
 
   /**
@@ -71,7 +93,7 @@ if (typeof Meteor === typeof undefined) {
    * Check LESS/CSS code style conformance.
    * @verbose
    */
-  gulp.task('lint-css', function () {
+  gulp.task('lint-css', function() {
     return gulp.src(cssSrc)
       .pipe(lessHint()).pipe(lessHint.reporter())
   })
@@ -79,7 +101,7 @@ if (typeof Meteor === typeof undefined) {
    * Check HTML code style conformance.
    * @verbose
    */
-  gulp.task('lint-html', function () {
+  gulp.task('lint-html', function() {
     return gulp.src(htmlSrc)
       .pipe(htmlLint({
         failOnError: true
@@ -89,7 +111,7 @@ if (typeof Meteor === typeof undefined) {
    * Check EcmaScript code style conformance.
    * @verbose
    */
-  gulp.task('lint-js', function () {
+  gulp.task('lint-js', function() {
     return gulp.src(jsSrc)
       .pipe(esLint())
       .pipe(esLint.format())
@@ -99,7 +121,7 @@ if (typeof Meteor === typeof undefined) {
    * Check JSON code style conformance.
    * @verbose
    */
-  gulp.task('lint-json', function () {
+  gulp.task('lint-json', function() {
     return gulp.src(jsonSrc)
       .pipe(jsonLint())
       .pipe(jsonLint.reporter())
@@ -114,7 +136,7 @@ if (typeof Meteor === typeof undefined) {
    * Format CSS source files.
    * @verbose
    */
-  gulp.task('tidy-css', function () {
+  gulp.task('tidy-css', function() {
     return gulp.src(cssSrc)
       .pipe(cssComb())
       .pipe(eol())
@@ -124,7 +146,7 @@ if (typeof Meteor === typeof undefined) {
    * Format HTML source files.
    * @verbose
    */
-  gulp.task('tidy-html', function () {
+  gulp.task('tidy-html', function() {
     return gulp.src(htmlSrc)
       .pipe(htmlPrettify({
         indent_char: ' ',
@@ -137,7 +159,7 @@ if (typeof Meteor === typeof undefined) {
    * Format EcmaScript source files.
    * @verbose
    */
-  gulp.task('tidy-js', function () {
+  gulp.task('tidy-js', function() {
     return gulp.src(jsSrc)
       .pipe(esFormatter())
       .pipe(eol())
@@ -147,7 +169,7 @@ if (typeof Meteor === typeof undefined) {
    * Format JSON source files.
    * @verbose
    */
-  gulp.task('tidy-json', function () {
+  gulp.task('tidy-json', function() {
     return gulp.src(jsonSrc)
       .pipe(jsonFormat(2))
       .pipe(eol())
@@ -157,8 +179,8 @@ if (typeof Meteor === typeof undefined) {
   /**
    * Trigger `default` task on source file change.
    */
-  gulp.task('watch', function () {
-    watch(allSrc, batch(function (events, done) {
+  gulp.task('watch', function() {
+    watch(allSrc, batch(function(events, done) {
       gulp.start('default', done)
     }))
   })
