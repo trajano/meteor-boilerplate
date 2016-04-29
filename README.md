@@ -20,9 +20,10 @@ up and running quickly and to provide a working example of my
 * `meteor run gulp help`
 * Linter rules defined
 * Formatter rules defined
-* API documents are generated
+* [API documents][2] are generated
 * Travis builds configured
 * Editor config
 
 [Meteor]: http://www.meteor.com/
 [1]: http://www.trajano.net/2016/05/meteor-application-structure
+[2]: http://localhost:3000/apidocs
