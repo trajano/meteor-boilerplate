@@ -1,2 +1,3 @@
+import 'angular'
 import '/imports/api'
-import '/imports/ui'
+import '/imports/ui/app'

@@ -23,7 +23,7 @@ This is specific for [AngularJS 1.x][3] and is a branch off [trajano/meteor-boil
 - Editor config
 - Testing support
 
-## AngularJS Specific features
+## AngularJS specific features
 
 - Disable debug on `--production`
 - UI Router
