@@ -1,5 +1,6 @@
 {
   "name": "meteor-boilerplate",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "meteor run",
@@ -39,11 +40,13 @@
     "gulp-eslint": "^2.0.0",
     "gulp-html-prettify": "0.0.1",
     "gulp-htmllint": "0.0.8",
+    "gulp-jsdoc3": "^0.2.1",
     "gulp-json-format": "^1.0.0",
     "gulp-jsonlint": "^1.1.2",
     "gulp-lesshint": "^1.1.0",
     "gulp-task-doc": "^1.0.8",
     "gulp-util": "^3.0.7",
-    "gulp-watch": "^4.3.5"
+    "gulp-watch": "^4.3.5",
+    "ink-docstrap": "^1.1.4"
   }
 }
