@@ -4,9 +4,28 @@
     "sourceType": "module"
   },
   "extends": [
+    "airbnb/base",
+    "plugin:meteor/recommended",
     "standard"
   ],
   "envs": {
     "meteor": true
+  },
+  "plugins": [
+    "import",
+    "meteor"
+  ],
+  "rules": {
+    "import/no-unresolved": [
+      2,
+      {
+        "ignore": [
+          "^meteor/"
+        ]
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": "meteor"
   }
 }
