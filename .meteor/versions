@@ -1,12 +1,11 @@
 allow-deny@1.0.4
-autopublish@1.0.7
+angular-templates@1.0.2
 autoupdate@1.2.9
 babel-compiler@6.6.4
 babel-runtime@0.1.8
 base64@1.0.8
 binary-heap@1.0.8
 blaze@2.1.7
-blaze-html-templates@1.0.4
 blaze-tools@1.0.8
 boilerplate-generator@1.0.8
 caching-compiler@1.0.4
@@ -31,7 +30,6 @@ html-tools@1.0.9
 htmljs@1.0.9
 http@1.1.5
 id-map@1.0.7
-insecure@1.0.7
 jquery@1.11.8
 launch-screen@1.0.11
 less@2.6.0
@@ -51,9 +49,10 @@ mongo-id@1.0.4
 npm-mongo@1.4.43
 observe-sequence@1.0.11
 ordered-dict@1.0.7
+pbastowski:angular-babel@1.3.4
 practicalmeteor:chai@2.1.0_1
 practicalmeteor:loglevel@1.2.0_2
-practicalmeteor:mocha@2.4.5_1
+practicalmeteor:mocha@2.4.5_2
 practicalmeteor:mocha-core@0.1.4
 practicalmeteor:sinon@1.14.1_2
 promise@0.6.7
