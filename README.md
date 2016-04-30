@@ -27,7 +27,7 @@ This is specific for [AngularJS 1.x][3] and is a branch off
 * Editor config
 * Testing support
 
-## AngularJS Specific features
+## AngularJS specific features
 
 * FastClick integration
 * Disable debug on `--production`
