@@ -3,6 +3,6 @@
 /**
  * @test
  */
-describe('sanity test only on server', function () {
+describe('sanity test only on client', function () {
   it('can test something', function () {})
 })
