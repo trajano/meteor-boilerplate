@@ -5,13 +5,16 @@
   },
   "extends": [
     "airbnb/base",
+    "angular",
     "plugin:meteor/recommended",
     "standard"
   ],
   "envs": {
+    "angular": true,
     "meteor": true
   },
   "plugins": [
+    "angular",
     "import",
     "meteor"
   ],
