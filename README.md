@@ -22,6 +22,13 @@ This is a boilerplate project for [Meteor] to get new [Meteor] projects up and r
 - Editor config
 - Testing support
 
+## AngularJS specific features
+
+- Disable debug on `--production`
+- UI Router
+- Authentication with [useraccounts:unstyled][5] and [accounts-password][6]
+- Works with Angular Batarang
+
 [1]: http://www.trajano.net/2016/05/meteor-application-structure
 [2]: http://localhost:3000/apidocs
 [ghpages]: http://site.trajano.net/meteor-boilerplate

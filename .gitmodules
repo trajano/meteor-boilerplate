@@ -1,0 +1,3 @@
+[submodule "packages/angular-blaze-template"]
+	path = packages/angular-blaze-template
+	url = https://github.com/trajano/angular-blaze-template.git
