@@ -35,7 +35,7 @@ var excludedSrcs = [
 var cssSrc = ['**/*.css', '**/*.less'].concat(excludedSrcs)
 var htmlSrc = ['**/*.html'].concat(excludedSrcs)
 var jsSrc = ['**/*.js'].concat(excludedSrcs)
-var jsonSrc = ['**/*.json', '.esformatter'].concat(excludedSrcs)
+var jsonSrc = ['**/*.json', '.esformatter', '.htmllintrc'].concat(excludedSrcs)
 
 // All source files
 var allSrc = _.sortedUniq([].concat(cssSrc).concat(htmlSrc).concat(jsSrc).concat(jsonSrc))
@@ -62,7 +62,11 @@ gulp.task('doc-js', function (cb) {
       },
       plugins: [
         'plugins/markdown'
-      ]
+      ],
+      templates: {
+        linenums: true,
+        outputSourceFiles: true
+      }
     }, cb))
 })
 
