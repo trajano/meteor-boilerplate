@@ -1,14 +1,18 @@
-import module from './module.js'
-import './meteorSample.html'
-
 /**
- * Meteor Sample component.  When documenting a responsibility just document
- * the class for the whole responsibility so it will appear in the Classes
- * dropdown.
+ * Meteor Sample component.
+ *
+ * AngularJS responsibilities are documented as namespaces that are
+ * a member of the ES6 module (not the AngularJS module).
  *
  * The structure of each responsibility is class followed angular module
  * definition.  This will allow migration to Angular2 in the future.
+ *
+ * @namespace meteorSample
+ * @memberof module:/imports/ui/components
  */
+import module from './module.js'
+import './meteorSample.html'
+
 class MeteorSampleController {
   constructor () {
     angular.noop()

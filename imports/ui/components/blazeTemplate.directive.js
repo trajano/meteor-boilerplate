@@ -1,6 +1,11 @@
 /**
- * Fork of https://github.com/Urigo/angular-blaze-template by Urigo
- * MIT license applies on this file.
+ * This directive allows the use of Blaze templates in Angular templates.
+ *
+ * This is a fork of https://github.com/Urigo/angular-blaze-template by
+ * Urigo. MIT license applies on this file.
+ *
+ * @namespace blazeTemplate
+ * @memberof module:/imports/ui/components
  */
 import module from './module.js'
 import { Blaze } from 'meteor/blaze'
@@ -11,10 +16,11 @@ angular.module(module.name)
     restrict: 'AE',
     scope: false,
     /**
+     * @memberof module:/imports/ui/components.blazeTemplate
      * @param {$rootScope.Scope} scope
      * @param {jQuery} element element where the Blaze template will be attached to.
      * @param {{name: string, blazeTemplate: string, replace:boolean}} attrs
-       */
+     */
     link: (scope, element, attrs) => {
       const name = attrs.blazeTemplate || attrs.name
       if (name && Template[name]) {

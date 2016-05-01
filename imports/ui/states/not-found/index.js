@@ -1,12 +1,8 @@
 /**
- * Home state definition.
+ * Not found state definition.
  *
- * Top-level states are implemented in `index.js` to reduce the amount of
- * typing needed for each state.  Child-states such as "edit" or "add" states
- * are managed in the same folder and imported here.
- *
- * The eslint is disabled for the angular.module line as there is a false
- * positive.
+ * @namespace not-found
+ * @memberof module:/imports/ui/states
  */
 import module from '../module.js'
 import './main.html'
