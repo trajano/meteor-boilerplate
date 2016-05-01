@@ -2,6 +2,8 @@
  * states Angular module definition.
  *
  * The UI Router configuration is performed here.
+ * @namespace "ui.states"
+ * @memberof module:/imports/ui/states
  */
 import ngUiRouter from 'angular-ui-router'
 import uiComponents from '/imports/ui/components'
@@ -9,15 +11,17 @@ import { Meteor } from 'meteor/meteor'
 
 /**
  * Authentication required.
- * @type {string}
+ * @type {Symbol}
+ * @memberof module:/imports/ui/states."ui.states"
  */
-export const AUTH_REQUIRED = 'AUTH_REQUIRED'
+export const AUTH_REQUIRED = Symbol()
 
 /**
  * Authenticated already.
- * @type {string}
+ * @type {Symbol}
+ * @memberof module:/imports/ui/states."ui.states"
  */
-export const ALREADY_AUTHENTICATED = 'ALREADY_AUTHENTICATED'
+export const ALREADY_AUTHENTICATED = Symbol()
 
 export default angular.module('ui.states', [ngUiRouter, uiComponents])
   .run(($rootScope, $log, $urlMatcherFactory, $state) => {
@@ -33,7 +37,8 @@ export default angular.module('ui.states', [ngUiRouter, uiComponents])
        * @param {*} toParams
        * @param {string} fromState
        * @param {*} fromParams
-       * @param {string} error
+       * @param {*} error
+       * @memberof module:/imports/ui/states."ui.states"
        */
       (event, toState, toParams, fromState, fromParams, error) => {
         if (error === AUTH_REQUIRED) {
