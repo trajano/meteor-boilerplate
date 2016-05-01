@@ -25,6 +25,7 @@ angular.module(module.name)
     $stateProvider.state('home', {
       controller: HomeStateController,
       controllerAs: 'homeStateCtrl',
+      parent: 'authenticated',
       templateUrl: 'imports/ui/states/home/main.html',
       url: '/'
     })
