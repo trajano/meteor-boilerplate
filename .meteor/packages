@@ -19,3 +19,5 @@ less
 practicalmeteor:mocha
 angular-templates
 pbastowski:angular-babel
+useraccounts:unstyled
+accounts-password
