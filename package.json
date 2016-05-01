@@ -2,7 +2,10 @@
   "name": "meteor-boilerplate",
   "private": true,
   "scripts": {
-    "start": "meteor run"
+    "start": "meteor run",
+    "gulp": "meteor node node_modules/gulp/bin/gulp.js",
+    "lint": "meteor node node_modules/gulp/bin/gulp.js lint",
+    "tidy": "meteor node node_modules/gulp/bin/gulp.js tidy"
   },
   "dependencies": {
     "lodash": "^4.11.1",

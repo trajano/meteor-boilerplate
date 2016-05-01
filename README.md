@@ -13,12 +13,11 @@ up and running quickly and to provide a working example of my
 1. `git clone https://github.com/trajano/meteor-boilerplate.git`
 2. `cd meteor-boilerplate`
 3. `meteor npm i`
-4. `meteor npm i -g gulp`
-5. `meteor`
+4. `meteor`
 
 ## Features
 
-* `gulp help`
+* `meteor run gulp help`
 * Linter rules defined
 * Formatter rules defined
 * API documents are generated
