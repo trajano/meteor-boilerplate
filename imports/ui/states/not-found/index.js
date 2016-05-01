@@ -11,17 +11,11 @@
 import module from '../module.js'
 import './main.html'
 
-class NotFoundStateController {
-  constructor () {
-    angular.noop()
-  }
-}
 // eslint-disable-next-line angular/module-getter
 angular.module(module.name)
   .config(($stateProvider) => {
     $stateProvider.state('not-found', {
-      controller: NotFoundStateController,
-      controllerAs: 'notFoundStateCtrl',
+      parent: 'authenticated',
       templateUrl: 'imports/ui/states/not-found/main.html',
       url: '/not-found'
     })
