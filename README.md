@@ -29,7 +29,6 @@ This is specific for [AngularJS 1.x][3] and is a branch off
 
 ## AngularJS specific features
 
-* FastClick integration
 * Disable debug on `--production`
 * UI Router
 * Authentication with [useraccounts:unstyled][5] and [accounts-password][6]
