@@ -1,5 +1,7 @@
 /**
  * Authenticated abstract state definition.
+ * @namespace authenticated
+ * @memberof module:/imports/ui/states
  */
 import module, { AUTH_REQUIRED } from './module.js'
 import { Meteor } from 'meteor/meteor'

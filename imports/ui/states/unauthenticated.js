@@ -1,9 +1,11 @@
-/**
- * Unauthenticated abstract state definition.
- */
 import module, { ALREADY_AUTHENTICATED } from './module.js'
 import { Meteor } from 'meteor/meteor'
 
+/**
+ * Unauthenticated abstract state definition.
+ * @namespace unauthenticated
+ * @memberof module:/imports/ui/states
+ */
 // eslint-disable-next-line angular/module-getter
 angular.module(module.name)
   .config(($stateProvider) => {

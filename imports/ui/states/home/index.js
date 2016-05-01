@@ -7,18 +7,41 @@
  *
  * The eslint is disabled for the angular.module line as there is a false
  * positive.
+ *
+ * Each state is tagged as a namespace with the state name and a member of
+ * {@link module:/imports/ui/states}.
+ *
+ * @namespace home
+ * @memberof module:/imports/ui/states
  */
 import module from '../module.js'
+import { Meteor } from 'meteor/meteor'
 import './main.html'
 
+/**
+ * Home state controller.
+ * @memberof module:/imports/ui/states.home
+ */
 class HomeStateController {
   /**
-   * Constructor for the controller.
+   * Constructor for the controller.  Assigns injected values as class members.
    */
-  constructor () {
-    angular.noop()
+  constructor ($state) {
+    this.state = $state
+  }
+
+  /**
+   * Sign out action.
+   */
+  signOut () {
+    Meteor.logout((error) => {
+      if (!error) {
+        this.state.go('sign-in')
+      }
+    })
   }
 }
+
 // eslint-disable-next-line angular/module-getter
 angular.module(module.name)
   .config(($stateProvider) => {
