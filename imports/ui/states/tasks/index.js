@@ -7,6 +7,8 @@
  */
 import module from '../module.js'
 import './main.html'
+import './add'
+import './edit'
 import { Tasks } from '/imports/api/tasks'
 
 /**
@@ -27,12 +29,11 @@ class TasksStateController {
   }
 
   add () {
-    Tasks.insert({
-      text: this.entryField
-    })
-    this.entryField = ''
+this.state.go('.add')
   }
-  edit (id) {}
+  edit (id) {
+    this.state.go('.edit', { id : id})
+  }
 }
 
 // eslint-disable-next-line angular/module-getter

@@ -7,7 +7,7 @@
  */
 import module from '../module.js'
 import { Meteor } from 'meteor/meteor'
-import './main.html'
+import './edit.html'
 
 /**
  * Home state controller.
@@ -21,16 +21,14 @@ class EditStateController {
     this.state = $state
   }
 
-  /**
-   * Sign out action.
-   */
-  signOut () {
-    Meteor.logout((error) => {
-      if (!error) {
-        this.state.go('sign-in')
-      }
-    })
+  add () {
+this.state.go("^")
   }
+
+  cancel () {
+this.state.go("^")
+  }
+
 }
 
 // eslint-disable-next-line angular/module-getter
@@ -39,8 +37,7 @@ angular.module(module.name)
     $stateProvider.state('tasks.edit', {
       controller: EditStateController,
       controllerAs: 'editStateCtrl',
-      parent: 'authenticated',
-      templateUrl: 'imports/ui/states/tasks/main.html',
+      templateUrl: 'imports/ui/states/tasks/edit.html',
       url: '/:id'
     })
   })

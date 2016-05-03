@@ -7,7 +7,7 @@
  */
 import module from '../module.js'
 import { Meteor } from 'meteor/meteor'
-import './main.html'
+import './add.html'
 
 /**
  * Home state controller.
@@ -21,15 +21,8 @@ class AddStateController {
     this.state = $state
   }
 
-  /**
-   * Sign out action.
-   */
-  signOut () {
-    Meteor.logout((error) => {
-      if (!error) {
-        this.state.go('sign-in')
-      }
-    })
+  cancel () {
+this.state.go("^")
   }
 }
 
@@ -39,8 +32,7 @@ angular.module(module.name)
     $stateProvider.state('tasks.add', {
       controller: AddStateController,
       controllerAs: 'addStateCtrl',
-      parent: 'authenticated',
-      templateUrl: 'imports/ui/states/tasks/main.html',
+      templateUrl: 'imports/ui/states/tasks/add.html',
       url: '/new'
     })
   })
