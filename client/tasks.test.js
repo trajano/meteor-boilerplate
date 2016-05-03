@@ -18,11 +18,15 @@ describe('collection test', () => {
   it('can query an empty collection', () => {
     expect(Tasks.find({}).fetch()).to.be.empty
   })
-  it('can fail to add to a collection when the user is not logged in', () => {
+  it('fails to add to a collection when the user is not logged in', (done) => {
     expect(Tasks.find({}).fetch()).to.be.empty
-    expect(() => Tasks.insert({
+    Tasks.insert({
       text: 'hello world'
-    })).to.throw('unauthorized')
+    }, (error) => {
+      console.log('expected', error)
+      assert(error)
+      done()
+    })
   })
 
   describe('logged in', () => {
@@ -34,15 +38,20 @@ describe('collection test', () => {
     afterEach(() => {
       sandbox.restore()
     })
-    it('can add to a collection', () => {
+    it('can add to a collection', (done) => {
       expect(Tasks.find({}).fetch()).to.be.empty
       Tasks.insert({
         text: 'hello world'
+      }, (error, _id) => {
+        console.log(error)
+        assert(!error)
+        const results = Tasks.find({}).fetch()
+        expect(results).to.have.lengthOf(1)
+        expect(results[0].defaultValue).to.equal(42)
+        expect(results[0]._id).to.equal(_id)
+        expect(results[0].createdOn).to.not.be.undefined
+        done()
       })
-      const results = Tasks.find({}).fetch()
-      expect(results).to.have.lengthOf(1)
-      expect(results[0].owner).to.equal(42)
-      expect(results[0].createdOn).to.not.be.undefined
     })
   })
 })

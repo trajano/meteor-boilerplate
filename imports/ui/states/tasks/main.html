@@ -1,0 +1,11 @@
+<div>
+  <h1>Tasks</h1>
+  <ul ng-repeat="entry in listStateCtrl.entries">
+      <li>{{entry |json}}</li>
+  </ul>
+    <form>
+        <input ng-model="listStateCtrl.entryField" />
+        <button ng-click="listStateCtrl.add()">Add</button>
+    </form>
+  <p>Go to a <a ui-sref="home">home</a>.</p>
+</div>

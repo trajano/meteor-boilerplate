@@ -6,3 +6,4 @@
  * should ensure there is an index to the mongo collection.
  * @module /imports/server
  */
+import './tasks'

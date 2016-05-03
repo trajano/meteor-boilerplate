@@ -7,6 +7,7 @@
  * layer.
  * @module /imports/api/tasks
  */
+import { Meteor } from 'meteor/meteor'
 import { Mongo } from 'meteor/mongo'
 import _ from 'lodash'
 
@@ -14,7 +15,7 @@ class TasksCollection extends Mongo.Collection {
   insert (task, callback) {
     const doc = _.extend({}, task, {
       createdOn: new Date(),
-      owner: this.userId
+      defaultValue: 42
     })
     super.insert(doc, callback)
   }
@@ -22,11 +23,3 @@ class TasksCollection extends Mongo.Collection {
 
 export const Tasks = new TasksCollection('tasks')
 
-// Simple checks to ensure that the user is logged in before making changes.
-Tasks.allow({
-  insert: (userId, doc) => {
-    console.log('userid', userId); return !!userId
-  },
-  update: (userId, doc, fields, modifier) => !!userId,
-  remove: (userId, doc) => !!userId
-})
