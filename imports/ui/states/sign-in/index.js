@@ -17,7 +17,7 @@ class SignInStateController {
    * Registers an onSubmitHook handler on AccountsTemplates to
    * redirect home when the person has signed in or registered successfully
    * @param $state
-     */
+   */
   constructor ($state) {
     AccountsTemplates.options.onSubmitHook = (error, state) => {
       if (!error && (state === 'signIn' || state === 'signUp')) {
