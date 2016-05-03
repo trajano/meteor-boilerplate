@@ -1,8 +1,10 @@
+import { assert } from 'chai'
 /* eslint-env mocha */
-/* eslint-disable func-names, prefer-arrow-callback */
 /**
  * @test
  */
-describe('sanity test on both', function () {
-  it('can test something', function () {})
+describe('sanity test on both', () => {
+  it('can test something', () => {
+    assert(true)
+  })
 })
