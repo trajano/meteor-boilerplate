@@ -26,5 +26,6 @@ import './unauthenticated'
 import './home'
 import './not-found'
 import './sign-in'
+import './tasks'
 
 export default module.name
