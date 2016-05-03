@@ -18,6 +18,7 @@ Tasks.allow({
   remove: (userId, doc) => !!userId
 })
 
-Meteor.publish('all-tasks', function() {
+// eslint-disable-next-line prefer-arrow-callback, func-names
+Meteor.publish('all-tasks', function () {
   return Tasks.find({})
 })

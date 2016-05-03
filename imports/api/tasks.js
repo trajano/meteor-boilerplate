@@ -7,7 +7,6 @@
  * layer.
  * @module /imports/api/tasks
  */
-import { Meteor } from 'meteor/meteor'
 import { Mongo } from 'meteor/mongo'
 import _ from 'lodash'
 

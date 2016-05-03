@@ -6,9 +6,8 @@
  * @memberof module:/imports/ui/states
  */
 import module from '../module.js'
-import { Meteor } from 'meteor/meteor'
 import './main.html'
-import {Tasks} from '/imports/api/tasks'
+import { Tasks } from '/imports/api/tasks'
 
 /**
  * List state controller.
@@ -18,7 +17,7 @@ class TasksStateController {
   /**
    * Constructor for the controller.  Assigns injected values as class members.
    */
-  constructor($state, $reactive, $scope) {
+  constructor ($state, $reactive, $scope) {
     $reactive(this).attach($scope)
     this.state = $state
     this.subscribe('all-tasks')
@@ -27,12 +26,13 @@ class TasksStateController {
     })
   }
 
-  add() {
-    Tasks.insert({text:this.entryField})
+  add () {
+    Tasks.insert({
+      text: this.entryField
+    })
     this.entryField = ''
   }
-  edit(id) {
-  }
+  edit (id) {}
 }
 
 // eslint-disable-next-line angular/module-getter

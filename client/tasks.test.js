@@ -1,5 +1,5 @@
 import { Meteor } from 'meteor/meteor'
-import { resetDatabase } from 'meteor/xolvio:cleaner';
+import { resetDatabase } from 'meteor/xolvio:cleaner'
 import { assert, expect } from 'chai'
 import { Tasks } from '/imports/api/tasks'
 import sinon from 'sinon'
@@ -16,15 +16,15 @@ describe('collection test', () => {
     assert(Tasks, 'unable to see sample collection')
   })
   it('can query an empty collection', () => {
-    expect(Tasks.find({}).fetch()).to.be.empty
+    expect(Tasks.find({}).fetch()).to.have.lengthOf(0)
   })
   it('fails to add to a collection when the user is not logged in', (done) => {
-    expect(Tasks.find({}).fetch()).to.be.empty
+    expect(Tasks.find({}).fetch()).to.have.lengthOf(0)
     Tasks.insert({
       text: 'hello world'
     }, (error) => {
-      console.log('expected', error)
       assert(error)
+      expect(error.error).not.equal(404)
       done()
     })
   })
@@ -39,17 +39,16 @@ describe('collection test', () => {
       sandbox.restore()
     })
     it('can add to a collection', (done) => {
-      expect(Tasks.find({}).fetch()).to.be.empty
+      expect(Tasks.find({}).fetch()).to.have.lengthOf(0)
       Tasks.insert({
         text: 'hello world'
-      }, (error, _id) => {
-        console.log(error)
+      }, (error, id) => {
         assert(!error)
         const results = Tasks.find({}).fetch()
         expect(results).to.have.lengthOf(1)
         expect(results[0].defaultValue).to.equal(42)
-        expect(results[0]._id).to.equal(_id)
-        expect(results[0].createdOn).to.not.be.undefined
+        expect(results[0].id).to.equal(id)
+        expect(results[0].createdOn).to.not.be.at.most(new Date())
         done()
       })
     })

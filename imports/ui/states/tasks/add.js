@@ -17,14 +17,14 @@ class AddStateController {
   /**
    * Constructor for the controller.  Assigns injected values as class members.
    */
-  constructor($state) {
+  constructor ($state) {
     this.state = $state
   }
 
   /**
    * Sign out action.
    */
-  signOut() {
+  signOut () {
     Meteor.logout((error) => {
       if (!error) {
         this.state.go('sign-in')
