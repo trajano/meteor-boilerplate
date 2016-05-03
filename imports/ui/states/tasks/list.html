@@ -1,0 +1,9 @@
+<div>
+  <h1>Tasks</h1>
+  <p><small>Click on an entry to edit</small></p>
+  <ul ng-repeat="entry in listStateCtrl.entries">
+    <li><span ng-click="listStateCtrl.edit(entry._id)">{{entry |json}}</span> <button ng-click="listStateCtrl.delete(entry._id)">Delete</button></li>
+  </ul>
+  <p><button ng-click="listStateCtrl.add()">Add</button></p>
+  <p>Go to a <a ui-sref="home">home</a>.</p>
+</div>
