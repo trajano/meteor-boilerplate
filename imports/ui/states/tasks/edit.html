@@ -1,0 +1,12 @@
+<div>
+  <h1>Edit {{editStateCtrl.id}}</h1>
+  <form>
+    <div ng-if="editStateCtrl.error" ng-bind="editStateCtrl.error"></div>
+    <div>
+      <input ng-model="editStateCtrl.entry.text" /> </div>
+    <div>
+      <button ng-click="editStateCtrl.save()">Save</button>
+      <button ng-click="editStateCtrl.cancel()">Cancel</button>
+    </div>
+  </form>
+</div>

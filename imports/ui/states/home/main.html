@@ -3,6 +3,11 @@
   <p>hello {{currentUser|json}}</p>
   <p>Angular Component follows</p>
   <meteor-sample></meteor-sample>
-  <p>Go to a <a href="non-existent-page">non-existent page</a>.</p>
-  <p><a href="#" ng-click="homeStateCtrl.signOut()">Sign out</a></p>
+  <p>Go to a
+    <a href="non-existent-page">non-existent page</a>.</p>
+  <p>Go to
+    <a ui-sref="tasks.list">Tasks</a>.</p>
+  <p>
+    <a href="#" ng-click="homeStateCtrl.signOut()">Sign out</a>
+  </p>
 </div>
