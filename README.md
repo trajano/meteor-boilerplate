@@ -8,7 +8,7 @@ This is a boilerplate project for [Meteor] to get new [Meteor] projects up and r
 
 1. `git clone https://github.com/trajano/meteor-boilerplate.git`
 2. `cd meteor-boilerplate`
-3. `meteor npm update`
+3. `meteor npm install`
 4. `meteor`
 
 ## Features

@@ -8,6 +8,7 @@ var esLint = require('gulp-eslint')
 var cssHint = require('gulp-csslint')
 var htmlLint = require('gulp-htmllint')
 var jsonLint = require('gulp-jsonlint')
+var tsLint = require('gulp-tslint')
 
 // Formatters
 var cssComb = require('gulp-csscomb')
@@ -29,6 +30,7 @@ var excludedSrcs = [
   '!packages/**',
   '!private/**',
   '!public/**',
+  '!typings/**',
   '!.meteor/**',
   '!.publish/**',
   '!**/*.min.*'
@@ -39,6 +41,7 @@ var cssSrc = ['**/*.css', '**/*.less'].concat(excludedSrcs)
 var htmlSrc = ['**/*.html'].concat(excludedSrcs)
 var jsSrc = ['**/*.js'].concat(excludedSrcs)
 var jsonSrc = ['**/*.json'].concat(excludedSrcs)
+var tsSrc = ['**/*.ts'].concat(excludedSrcs)
 
 // Tidy Configuration Sources
 var tidyConfigSrc = ['.csscomb.json', '.esformatter', '.htmllintrc']
@@ -87,7 +90,7 @@ gulp.task('doc-deploy', ['doc'], function () {
 /**
  * Check code style conformance.
  */
-gulp.task('lint', ['lint-css', 'lint-html', 'lint-js', 'lint-json'])
+gulp.task('lint', ['lint-css', 'lint-html', 'lint-js', 'lint-ts', 'lint-json'])
 /**
  * Check JSON code style conformance for tidy configuration files.
  * @verbose
@@ -136,6 +139,15 @@ gulp.task('lint-json', function () {
     .pipe(jsonLint())
     .pipe(jsonLint.reporter())
     .pipe(jsonLint.failOnError())
+})
+/**
+ * Check TypeScript code style conformance.
+ * @verbose
+ */
+gulp.task('lint-ts', function () {
+  return gulp.src(tsSrc)
+    .pipe(tsLint())
+    .pipe(tsLint.report('verbose'))
 })
 
 /**

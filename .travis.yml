@@ -1,6 +1,6 @@
 sudo: false
 
-language: node_js
+language: generic
 
 before_install:
   - curl https://install.meteor.com | /bin/sh

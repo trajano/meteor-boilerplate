@@ -2,6 +2,7 @@ import angular from 'angular'
 import 'angular-mocks'
 import uiStates from '/imports/ui/states'
 import ngUiRouter from 'angular-ui-router'
+import 'reflect-metadata'
 import { assert } from 'chai'
 /* eslint-env mocha */
 /**

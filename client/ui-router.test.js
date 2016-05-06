@@ -1,5 +1,6 @@
 import angular from 'angular'
 import 'angular-mocks'
+import 'reflect-metadata'
 import uiStates from '/imports/ui/states'
 import { assert, expect } from 'chai'
 import sinon from 'sinon'

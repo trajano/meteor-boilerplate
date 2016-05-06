@@ -1,4 +1,5 @@
 import { assert } from 'chai'
+import 'reflect-metadata'
 /* eslint-env mocha */
 /**
  * @test
