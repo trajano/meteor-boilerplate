@@ -1,0 +1,7 @@
+/**
+ * Called asynchronously with the error or result after the method is complete.
+ * @callback asyncCallback
+ * @param {Meteor.Error} error error
+ * @param {Object} result result
+ * @see {@link http://docs.meteor.com/#/full/meteor_call|Meteor.call}
+ */
