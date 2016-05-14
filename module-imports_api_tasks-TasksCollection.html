@@ -47,7 +47,7 @@
 			<li class="dropdown">
 				<a href="mixins.list.html" class="dropdown-toggle" data-toggle="dropdown">Mixins<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="module-imports_api_tasks-Tasks.insertTask.run.html">imports/api/tasks~Tasks.insertTask.run</a></li>
+					<li><a href="module-imports_api_tasks-Tasks.insertTaskMethod.run.html">imports/api/tasks~Tasks.insertTaskMethod.run</a></li>
 				</ul>
 			</li>
 			
@@ -157,7 +157,7 @@ attaches the schema, then defines the methods.</p>
 		<ul class="dummy">
 			<li>
 				<a href="imports_api_tasks.js.html">imports/api/tasks.js</a>,
-				 <a href="imports_api_tasks.js.html#sunlight-1-line-19">line 19</a>
+				 <a href="imports_api_tasks.js.html#sunlight-1-line-20">line 20</a>
 			</li>
 		</ul>
 	</dd>
@@ -200,17 +200,20 @@ attaches the schema, then defines the methods.</p>
     
 
     
-        <h3 class="subsection-title">Members</h3>
+
+    
+        <h3 class="subsection-title">Methods</h3>
 
         <dl>
             
 <hr>
-<dt class="name" id="insertTask">
-    <h4><span class="type-signature"></span>insertTask<span class="type-signature"></span></h4>
-
+<dt>
+    <h4 class="name" id="insertTask"><span class="type-signature"></span>insertTask(text, <span class="optional">cb</span>)</h4>
+    
     
 </dt>
 <dd>
+
     
     <div class="description">
         <p>Insert task method.  This is an example of an exposed method so the
@@ -223,6 +226,105 @@ repetition.</p>
     
 
     
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>text</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>task text</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>cb</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">asyncCallback</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>callback</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
 <dl class="details">
     
 
@@ -258,7 +360,7 @@ repetition.</p>
 		<ul class="dummy">
 			<li>
 				<a href="imports_api_tasks.js.html">imports/api/tasks.js</a>,
-				 <a href="imports_api_tasks.js.html#sunlight-1-line-93">line 93</a>
+				 <a href="imports_api_tasks.js.html#sunlight-1-line-88">line 88</a>
 			</li>
 		</ul>
 	</dd>
@@ -273,17 +375,30 @@ repetition.</p>
 
 
     
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
 </dd>
 
         
             
 <hr>
-<dt class="name" id="removeTask">
-    <h4><span class="type-signature"></span>removeTask<span class="type-signature"></span></h4>
-
+<dt>
+    <h4 class="name" id="removeTask"><span class="type-signature"></span>removeTask(id, <span class="optional">cb</span>)</h4>
+    
     
 </dt>
 <dd>
+
     
     <div class="description">
         <p>Remove task.</p>
@@ -293,6 +408,105 @@ repetition.</p>
     
 
     
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>task ID</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>cb</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">asyncCallback</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>callback</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
 <dl class="details">
     
 
@@ -328,7 +542,7 @@ repetition.</p>
 		<ul class="dummy">
 			<li>
 				<a href="imports_api_tasks.js.html">imports/api/tasks.js</a>,
-				 <a href="imports_api_tasks.js.html#sunlight-1-line-111">line 111</a>
+				 <a href="imports_api_tasks.js.html#sunlight-1-line-112">line 112</a>
 			</li>
 		</ul>
 	</dd>
@@ -343,17 +557,30 @@ repetition.</p>
 
 
     
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
 </dd>
 
         
             
 <hr>
-<dt class="name" id="updateTask">
-    <h4><span class="type-signature"></span>updateTask<span class="type-signature"></span></h4>
-
+<dt>
+    <h4 class="name" id="updateTask"><span class="type-signature"></span>updateTask(id, text, <span class="optional">cb</span>)</h4>
+    
     
 </dt>
 <dd>
+
     
     <div class="description">
         <p>Update task.</p>
@@ -363,6 +590,137 @@ repetition.</p>
     
 
     
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>task ID</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>text</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>task text</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>cb</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">asyncCallback</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>callback</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
 <dl class="details">
     
 
@@ -398,7 +756,7 @@ repetition.</p>
 		<ul class="dummy">
 			<li>
 				<a href="imports_api_tasks.js.html">imports/api/tasks.js</a>,
-				 <a href="imports_api_tasks.js.html#sunlight-1-line-102">line 102</a>
+				 <a href="imports_api_tasks.js.html#sunlight-1-line-100">line 100</a>
 			</li>
 		</ul>
 	</dd>
@@ -413,11 +771,21 @@ repetition.</p>
 
 
     
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
 </dd>
 
         </dl>
-    
-
     
 
     
@@ -465,7 +833,7 @@ repetition.</p>
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a>
 	
-		on 2016-05-13T09:11:35-04:00
+		on 2016-05-14T00:56:16-04:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
