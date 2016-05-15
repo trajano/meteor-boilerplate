@@ -13,6 +13,7 @@
  * @module imports/ui
  */
 import ngAnimate from 'angular-animate'
+import ngBlazeTemplate from 'meteor/trajano:angular-blaze-template'
 import ngMeteor from 'angular-meteor'
 import ngMeteorAuth from 'angular-meteor-auth'
 import ngSanitize from 'angular-sanitize'
@@ -23,6 +24,7 @@ import uiStates from '/imports/ui/states'
 
 angular.module('ui.app', [
   ngAnimate,
+  ngBlazeTemplate,
   ngMeteor,
   ngMeteorAuth,
   ngSanitize,

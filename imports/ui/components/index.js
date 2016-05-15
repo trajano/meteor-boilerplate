@@ -8,7 +8,6 @@
  * @module imports/ui/components
  */
 import module from './module.js'
-import './blazeTemplate.directive'
 import './meteorSample.component'
 
 export default module.name

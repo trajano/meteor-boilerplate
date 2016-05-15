@@ -14,7 +14,6 @@ babel-runtime@0.1.9_1
 base64@1.0.9
 binary-heap@1.0.9
 blaze@2.1.8
-blaze-html-templates@1.0.4
 blaze-tools@1.0.9
 boilerplate-generator@1.0.9
 caching-compiler@1.0.5_1
@@ -66,6 +65,7 @@ npm-bcrypt@0.8.7
 npm-mongo@1.4.44_1
 observe-sequence@1.0.12
 ordered-dict@1.0.8
+pbastowski:angular-babel@1.3.6
 practicalmeteor:chai@2.1.0_1
 practicalmeteor:loglevel@1.2.0_2
 practicalmeteor:mocha@2.4.5-rc5.5
@@ -92,6 +92,7 @@ templating@1.1.12_1
 templating-tools@1.0.4
 tmeasday:test-reporter-helpers@0.2.1
 tracker@1.0.14
+trajano:angular-blaze-template@0.3.2
 tunifight:loggedin-mixin@0.1.0
 ui@1.0.11
 underscore@1.0.9
