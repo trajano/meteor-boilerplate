@@ -24,5 +24,5 @@ class controller {
 angular.module(module.name)
   .component('meteorSample', {
     controller,
-    templateUrl
+    templateUrl: templateUrl.default
   })

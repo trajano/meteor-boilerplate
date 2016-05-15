@@ -11,7 +11,7 @@ angular.module(module.name)
   .config(($stateProvider) => {
     $stateProvider.state('not-found', {
       parent: 'authenticated',
-      templateUrl,
+      templateUrl: templateUrl.default,
       url: '/not-found'
     })
   })

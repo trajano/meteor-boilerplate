@@ -39,7 +39,7 @@ angular.module(module.name)
     $stateProvider.state('tasks.add', {
       controller,
       controllerAs: 'addStateCtrl',
-      templateUrl,
+      templateUrl: templateUrl.default,
       url: '/new'
     })
   })

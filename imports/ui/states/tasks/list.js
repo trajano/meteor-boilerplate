@@ -43,7 +43,7 @@ angular.module(module.name)
     $stateProvider.state('tasks.list', {
       controller,
       controllerAs: 'listStateCtrl',
-      templateUrl,
+      templateUrl: templateUrl.default,
       url: ''
     })
   })

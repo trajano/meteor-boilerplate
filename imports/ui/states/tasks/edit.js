@@ -64,7 +64,7 @@ angular.module(module.name)
           )
         })
       },
-      templateUrl,
+      templateUrl: templateUrl.default,
       url: '/:id'
     })
   })

@@ -38,7 +38,7 @@ angular.module(module.name)
       controller,
       controllerAs: 'signInStateCtrl',
       parent: 'unauthenticated',
-      templateUrl,
+      templateUrl: templateUrl.default,
       url: '/sign-in'
     })
   })

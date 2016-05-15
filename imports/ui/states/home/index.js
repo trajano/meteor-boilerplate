@@ -47,7 +47,7 @@ angular.module(module.name)
       controller,
       controllerAs: 'homeStateCtrl',
       parent: 'authenticated',
-      templateUrl,
+      templateUrl: templateUrl.default,
       url: '/'
     })
   })
