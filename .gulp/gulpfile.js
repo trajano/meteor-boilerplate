@@ -36,7 +36,7 @@ var excludedSrcs = [
 // Sources
 var cssSrc = ['**/*.css', '**/*.less'].concat(excludedSrcs)
 var htmlSrc = ['**/*.html'].concat(excludedSrcs)
-var jsSrc = ['**/*.js'].concat(excludedSrcs)
+var jsSrc = ['**/*.js', '**/*.jsx'].concat(excludedSrcs)
 var jsonSrc = ['**/*.json'].concat(excludedSrcs)
 
 // Tidy Configuration Sources

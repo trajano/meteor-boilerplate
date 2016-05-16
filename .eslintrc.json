@@ -6,7 +6,8 @@
   "extends": [
     "airbnb/base",
     "plugin:meteor/recommended",
-    "standard"
+    "standard",
+    "standard-react"
   ],
   "envs": {
     "meteor": true
@@ -15,7 +16,10 @@
     "import",
     "meteor"
   ],
-  "rules": {},
+  "rules": {
+    "react/jsx-curly-spacing": [2, "always"],
+    "react/jsx-indent": 0
+  },
   "settings": {
     "import/resolver": "meteor"
   }

@@ -2,6 +2,7 @@
   "root": true,
   "plugins": [
     "esformatter-asi",
+    "esformatter-jsx",
     "esformatter-limit-linebreaks",
     "esformatter-quotes",
     "esformatter-quote-props",
@@ -12,9 +13,13 @@
     "type": "single"
   },
   "whiteSpace": {
+    "before": {
+      "JSXClosingElement": 0
+    },
     "after": {
       "FunctionName": 1,
       "FunctionReservedWord": 1,
+      "JSXOpeningElement": 0,
       "MethodDefinitionName": 1
     }
   }
