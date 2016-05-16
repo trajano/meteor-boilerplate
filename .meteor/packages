@@ -25,3 +25,8 @@ practicalmeteor:mocha
 tunifight:loggedin-mixin
 xolvio:cleaner
 mdg:validation-error
+kadira:flow-router
+kadira:blaze-layout
+accounts-password
+useraccounts:core
+useraccounts:unstyled

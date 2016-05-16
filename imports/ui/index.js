@@ -2,4 +2,5 @@
  * UI module.
  * @module /imports/ui
  */
-import './main.js'
+import '/imports/routes'
+import './states'
