@@ -7,7 +7,8 @@
  *
  * @module imports/ui/components
  */
-import module from './module.js'
+import module from './module'
 import './meteorSample.component'
+import './downgraded'
 
 export default module.name
