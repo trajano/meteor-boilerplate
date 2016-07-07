@@ -1,5 +1,6 @@
 import angular from 'angular'
 import 'angular-mocks'
+import 'angular2-meteor-polyfills/browser'
 import uiStates from '/imports/ui/states'
 import ngUiRouter from 'angular-ui-router'
 import { assert } from 'chai'
