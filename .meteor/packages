@@ -19,7 +19,6 @@ accounts-password
 aldeed:collection2
 aldeed:simple-schema
 angular2-compilers
-less
 mdg:validated-method
 mdg:validation-error
 dispatch:mocha-phantomjs

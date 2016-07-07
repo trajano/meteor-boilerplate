@@ -9,7 +9,7 @@
     "lint": "gulp lint",
     "tidy": "gulp tidy",
     "typings": "typings",
-    "install": "typings install"
+    "postinstall": "typings install"
   },
   "dependencies": {
     "@angular/common": "^2.0.0-rc.4",
@@ -26,7 +26,8 @@
     "angular-meteor-auth": "^1.0.3",
     "angular-sanitize": "^1.5.7",
     "angular-ui-router": "^0.3.1",
-    "angular2-meteor": "^0.5.5",
+    "angular2-meteor": "^0.5.6",
+    "angular2-meteor-polyfills": "^0.1.1",
     "core-js": "^2.4.0",
     "lodash": "^4.11.1",
     "meteor-node-stubs": "~0.2.0",

@@ -7,7 +7,7 @@ before_install:
   - export PATH="$HOME/.meteor:$PATH"
 
 before_script:
-  - meteor npm update
+  - meteor npm install --no-optional
 
 cache:
   directories:

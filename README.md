@@ -1,6 +1,6 @@
 # Meteor Boilerplate Project
 
-[![Build Status](https://travis-ci.org/trajano/meteor-boilerplate.svg?branch=master)](https://travis-ci.org/trajano/meteor-boilerplate)
+[![Build Status](https://travis-ci.org/trajano/meteor-boilerplate.svg?branch=angular2)](https://travis-ci.org/trajano/meteor-boilerplate)
 
 This is a boilerplate project for [Meteor] to get new [Meteor] projects up and running quickly and to provide a working example of my [Meteor Application Structure][1].
 
@@ -8,7 +8,7 @@ This is a boilerplate project for [Meteor] to get new [Meteor] projects up and r
 
 1. `git clone https://github.com/trajano/meteor-boilerplate.git`
 2. `cd meteor-boilerplate`
-3. `meteor npm install`
+3. `meteor npm install --no-optional`
 4. `meteor`
 
 ## Features
