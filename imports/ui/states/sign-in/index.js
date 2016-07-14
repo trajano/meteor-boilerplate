@@ -5,7 +5,7 @@
  */
 import module from '../module.js'
 import { AccountsTemplates } from 'meteor/useraccounts:core'
-import templateUrl from './main.html'
+import template from './main.html'
 
 /**
  * Sign in state controller.
@@ -38,7 +38,7 @@ angular.module(module.name)
       controller,
       controllerAs: 'signInStateCtrl',
       parent: 'unauthenticated',
-      templateUrl: templateUrl.default,
+      template,
       url: '/sign-in'
     })
   })

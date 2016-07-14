@@ -7,7 +7,7 @@
  * @module
  */
 import module from './module.js'
-import templateUrl from './meteorSample.html'
+import template from './meteorSample.html'
 
 import packageJson from '/package.json'
 
@@ -24,5 +24,5 @@ class controller {
 angular.module(module.name)
   .component('meteorSample', {
     controller,
-    templateUrl: templateUrl.default
+    template
   })

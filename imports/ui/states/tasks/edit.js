@@ -5,7 +5,7 @@
  */
 import module from '../module.js'
 import { Meteor } from 'meteor/meteor'
-import templateUrl from './edit.html'
+import template from './edit.html'
 import { Tasks } from '/imports/api/tasks'
 
 /**
@@ -64,7 +64,7 @@ angular.module(module.name)
           )
         })
       },
-      templateUrl: templateUrl.default,
+      template,
       url: '/:id'
     })
   })

@@ -15,7 +15,7 @@
  */
 import module from '../module.js'
 import { Meteor } from 'meteor/meteor'
-import templateUrl from './main.html'
+import template from './main.html'
 
 /**
  * Home state controller.
@@ -47,7 +47,7 @@ angular.module(module.name)
       controller,
       controllerAs: 'homeStateCtrl',
       parent: 'authenticated',
-      templateUrl: templateUrl.default,
+      template,
       url: '/'
     })
   })

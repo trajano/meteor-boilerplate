@@ -3,9 +3,7 @@
  * @module
  */
 import 'angular'
-import 'reflect-metadata'
-import 'rxjs'
-import 'zone.js/dist/zone'
+import 'angular2-meteor-polyfills'
 import '/imports/ui'
 import { upgradeAdapter } from '../imports/ui/upgradeAdapter'
 

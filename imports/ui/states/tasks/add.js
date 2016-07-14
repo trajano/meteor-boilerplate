@@ -5,7 +5,7 @@
  * @module
  */
 import module from '../module.js'
-import templateUrl from './add.html'
+import template from './add.html'
 import { Tasks } from '/imports/api/tasks'
 /**
  * Tasks add sub-state controller.
@@ -39,7 +39,7 @@ angular.module(module.name)
     $stateProvider.state('tasks.add', {
       controller,
       controllerAs: 'addStateCtrl',
-      templateUrl: templateUrl.default,
+      template,
       url: '/new'
     })
   })

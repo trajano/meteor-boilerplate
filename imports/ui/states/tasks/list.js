@@ -5,7 +5,7 @@
  * @module
  */
 import module from '../module.js'
-import templateUrl from './list.html'
+import template from './list.html'
 import { Tasks } from '/imports/api/tasks'
 
 /**
@@ -43,7 +43,7 @@ angular.module(module.name)
     $stateProvider.state('tasks.list', {
       controller,
       controllerAs: 'listStateCtrl',
-      templateUrl: templateUrl.default,
+      template,
       url: ''
     })
   })

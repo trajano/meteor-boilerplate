@@ -8,6 +8,7 @@
  */
 import { Component } from '@angular/core'
 import { MeteorComponent } from 'angular2-meteor'
+import template from './secondMeteorSample.html'
 
 /**
  * Controller class.  This is named 'controller' to allow the use of ES6
@@ -15,7 +16,7 @@ import { MeteorComponent } from 'angular2-meteor'
  */
 @Component({
   selector: 'second-meteor-sample',
-  templateUrl: require('./secondMeteorSample.html').default
+  template
 })
 export class SecondMeteorSampleComponent extends MeteorComponent {
   packageJson: Object
